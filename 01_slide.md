@@ -15,11 +15,13 @@
 
     forM_ [1..].filter(isPrime) putStrLn
 
-!SLIDE bullets
+!SLIDE bullets incremental
 #fp - lists
+* filter, map, fold, zip, >>=
 
-!SLIDE bullets
+!SLIDE bullets incremental
 #frp - events
+* filter, map, scan, merge, combine, >>=
 
 !SLIDE bullets incremental
 #RxJs
@@ -38,17 +40,19 @@
 !SLIDE
 subscribe :: Observable a -> Observer a -> IO (IO ())
 
-!SLIDE
+!SLIDE bullets incremental
 #Mouse cliks
-
-!SLIDE
-#Array as Observable
-
-!SLIDE
-#that's not a stream
+* $("h1").toObservable("click")
 
 !SLIDE
 #stream = [(time, event)]
+
+!SLIDE bullets incremental
+#Array as Observable
+* Rx.Observable.FromArray([1, 2, 3])
+
+!SLIDE
+#that's not a stream
 
 !SLIDE bullets incremental
 #bacon.js
@@ -70,3 +74,6 @@ subscribe :: Observable a -> Observer a -> IO (IO ())
 !SLIDE bullets
 * mouseCliks :: EventStream
 * mousePos :: Property
+
+!SLIDE
+#TODO: UML (obs, es, prop)
