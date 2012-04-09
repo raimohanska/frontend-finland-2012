@@ -44,15 +44,18 @@ subscribe :: Observable a -> Observer a -> IO (IO ())
 #Mouse cliks
 * $("h1").toObservable("click")
 
-!SLIDE
-#stream = [(time, event)]
-
 !SLIDE bullets incremental
 #Array as Observable
 * Rx.Observable.FromArray([1, 2, 3])
 
 !SLIDE
 #that's not a stream
+
+!SLIDE
+#stream = [(time, event)]
+
+!SLIDE
+#DOM < jQuery < RxJs
 
 !SLIDE bullets incremental
 #bacon.js
@@ -75,5 +78,5 @@ subscribe :: Observable a -> Observer a -> IO (IO ())
 * mouseCliks :: EventStream
 * mousePos :: Property
 
-!SLIDE
-#TODO: UML (obs, es, prop)
+!SLIDE center
+![uml](images/observable.png)
