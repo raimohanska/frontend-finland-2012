@@ -5,12 +5,13 @@
 !SLIDE code
 
     managers = new ArrayList<Employee>()
-    for (Employee e : employees) {
+    for (int i = 0; i < employees.size(); i++) {
+      Employee e = employees.get(i);
       if (e.title.equals("manager")) {
-        managers.add(e)
+        managers.add(e);
       }
     }
-    return managers
+    return managers;
 
 !SLIDE code
 
