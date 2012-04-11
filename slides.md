@@ -4,16 +4,17 @@
 
 !SLIDE code
 
-    tmpvec = new Vector(10)
-    for (int i = 0; i < blah; i++) {
-        for (int j = foo ; i <= wat; j++) {
-            tmpvec.add(new Blurp())
-        }
+    managers = new ArrayList<Employee>()
+    for (Employee e : employees) {
+      if (e.title.equals("manager")) {
+        managers.add(e)
+      }
     }
+    return managers
 
 !SLIDE code
 
-    forM_ [1..].filter(isPrime) putStrLn
+    filter ((== "manager") . title) employees
 
 !SLIDE bullets incremental
 #fp - lists
@@ -41,7 +42,7 @@
 subscribe :: Observable a -> Observer a -> IO (IO ())
 
 !SLIDE bullets incremental
-#Mouse cliks
+#Mouse clicks
 * $("h1").toObservable("click")
 
 !SLIDE bullets incremental
@@ -54,8 +55,11 @@ subscribe :: Observable a -> Observer a -> IO (IO ())
 !SLIDE
 #stream = [(time, event)]
 
-!SLIDE
-#DOM < jQuery < RxJs
+!SLIDE bullets incremental
+#Observable
+* select, where, take, skip
+* merge, zip, combineLatest
+* selectMany 
 
 !SLIDE bullets incremental
 #bacon.js
@@ -75,8 +79,11 @@ subscribe :: Observable a -> Observer a -> IO (IO ())
 #value-as-function-of-time
 
 !SLIDE bullets
-* mouseCliks :: EventStream
+* mouseClicks :: EventStream
 * mousePos :: Property
 
 !SLIDE center
 ![uml](images/observable.png)
+
+!SLIDE center
+![pacman](images/pacman.png)
